@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cambiar_fondo{
+            background-color: aqua;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid ;
+        }
+    </style>
+</head>
+<body id="contenedor">
+    <h1>Ivan Amaya</h1>
+
+    <input type="text" id="variable">
+    <button onclick="name_function();" id="name_event">CALCULAR</button>
+    <H1 id="titulo"></H1>
+    <p id="cambiar_fondo">cambiar fondo</p>
+    <script>
+        console.log("INGRESA");
+        // VARIABLES
+        const nameUno = "esto es cualquier cosa";
+        var name_dos = "esto es cualquier cosa";
+        let nameTres = "esto es cualquier cosa";
+        console.log(nameUno + "\n" + name_dos +"\n" + nameTres);
+        // TIPOS DE DATOS
+        let num_a=10;
+        let num_b=5.5;
+        let boolean=false;
+        let stringvar="mi nombre es";
+        let arraynum= [1,2,3,4,5,"6","7","8"];
+        let dias_semana= ["lunes","martes", "miercoles", "jueves", "viernes","sabado", "domingo"];
+        let users=[
+            {name:"Ivan", last_name:"Amaya",age:13},
+            {name:"Ivan", last_name:"Amaya",age:13},
+            {name:"Ivan", last_name:"Amaya",age:13}
+        ]
+        //operadores aritmeticos + - * / % ^
+        let suma=num_a + num_b;
+        let resta=num_a - num_b;
+        let multi=num_a * num_b;
+        let divi=num_a / num_b;
+        let module=num_a % num_b;
+        let expo=num_a ^ num_b;
+        console.log (suma);
+        suma=Math.round(suma);
+        console.log("suma= " +suma +"\nResta=" +resta);
+        // OPERADORES DE COMPARACION < / > 7 <> / <= / >= / = / == / ===
+        // OPERADORES LOGICOS ands && / or || / ! negacion, diferente, contrario
+        console.log(boolean + " -- " + !boolean);
+        // ESTRUCTURAS CONDICIONALES IF / ELSE / ESLE IF / SWITCH (break)
+        // ESTRUCTURAS REPETITIVAS O CICLICAS FOR / WHILE / DO WHILE
+        let long_nameuno=nameUno.length;
+        console.log(arraynum.nameUno);
+        if (long_nameuno>= 22){
+            let name_minus = nameUno.toLowerCase();
+            console.log(name_minus);
+            console.log(dias_semana[0]);
+            console.log(users[0].name);
+        }
+        else{
+            console.log("NO TIENE LA LONGITUD")
+        }
+        for(let i=0; i<=dias_semana.length;i++){
+            console.log(dias_semana[i]);
+        }
+        let i=0;
+        while(i<dias_semana.length){
+            console.log(dias_semana[i]);
+            i++;
+        }
+        let j=0;
+        while(j<users.length){
+            console.log(users[j]);
+            j++;
+        }
+        //FUNCIONES
+        function name_function(){
+            let varibale= document.getElementById('variable').value;
+            variable = variable.toUpperCase();
+            document.getElementById("titulo").innerText= variable;
+            document.getElementById("titulo").style.color = "green";
+        };
+        document.getElementById("name_event").addEventListener("dblclick", function(){
+            let variable= document.getElementById('variable').value;
+            document.getElementById("titulo").style.background = "gray";
+
+        });
+        document.getElementById("cambiar_fondo").addEventListener("mouseover", function(){
+            document.getElementById('contenedor').style.background="red";
+        })
+
+    </script>
+</body>
+</html>
